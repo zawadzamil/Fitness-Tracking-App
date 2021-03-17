@@ -33,7 +33,7 @@ public class StudentController {
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String saveStudent(@ModelAttribute("student") Student std) {
         service.save(std);
-        return "redirect:/";
+        return "redirect:/Index";
     }
 
     @RequestMapping("/edit/{id}")
@@ -47,6 +47,6 @@ public class StudentController {
     @RequestMapping("/delete/{id}")
     public String deletestudent(@PathVariable(name = "id") int id) {
         service.delete(id);
-        return "redirect:/";
+        return "redirect:/Index";
     }
 }
