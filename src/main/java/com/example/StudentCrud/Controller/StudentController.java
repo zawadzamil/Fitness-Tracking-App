@@ -16,12 +16,12 @@ public class StudentController {
     @Autowired
     private StudentService service;
 
-    @GetMapping("/")
+    @GetMapping("/Index")
     public String viewHomePage(Model model) {
         List<Student> liststudent = service.listAll();
         model.addAttribute("liststudent", liststudent);
-        System.out.print("Get / ");
-        return "index";
+        System.out.print("Get /Index ");
+        return "Index";
     }
 
     @GetMapping("/CreateUser")
