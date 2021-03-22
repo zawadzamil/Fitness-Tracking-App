@@ -3,13 +3,13 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8" />
-    <title>Create New Product</title>
+    <title>Create New User</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
     <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
 </head>
 <body>
 <div align="center">
-    <h1>Create New Student</h1>
+    <h1>Create New User</h1>
     <br />
     <div class="col-sm-4">
         <form action="#" th:action="@{/save}" th:object="${student}" method="post">
@@ -17,10 +17,10 @@
 
             <div alight="left">
                 <tr>
-                    <label class="form-label" >Student Name</label>
+                    <label class="form-label" >Name</label>
                     <td>
                         <input type="hidden" th:field="*{id}" />
-                        <input type="text" th:field="*{studentname}" class="form-control" placeholder="Student Name" />
+                        <input type="text" th:field="*{name}" class="form-control" placeholder="Your Name" />
                     </td>
                 </tr>
             </div>
@@ -28,14 +28,26 @@
             <div alight="left">
 
                 <tr>
-                    <label class="form-label" >Course</label>
-                    <td><input type="text" th:field="*{course}" class="form-control" placeholder="Course" /></td>
+                    <label class="form-label" >Time and Date</label>
+                    <td><input type="text" th:field="*{timeAndDate}" class="form-control" placeholder="00-00-0000" /></td>
                 </tr>
             </div>
             <div alight="left">
                 <tr>
-                    <label class="form-label" >Fee</label>
-                    <td><input type="text" th:field="*{fee}" class="form-control" placeholder="Fee" /></td>
+                    <label class="form-label" > Weight</label>
+                    <td><input type="text" th:field="*{weight}" class="form-control" placeholder="Weight" /></td>
+                </tr>
+            </div>
+            <div alight="left">
+                <tr>
+                    <label class="form-label" >Body Measurements</label>
+                    <td><input type="text" th:field="*{body_measurements}" class="form-control" placeholder="Height inch,Chest cm,Waist cm" /></td>
+                </tr>
+            </div>
+            <div alight="left">
+                <tr>
+                    <label class="form-label" >Heart Rate</label>
+                    <td><input type="text" th:field="*{heartRate}" class="form-control" placeholder="HeartRate" /></td>
                 </tr>
             </div>
             <br>

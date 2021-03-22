@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+<body >
+    <div align="center" class="d-flex flex-column" >
+        <br>
+        <div class="p-2">
+            <form action="#" data-th-action="@{/trainer}" data-th-object="${model}" method="Get">
+                <button type="submit" name="Trainer" class="btn btn-dark btn-lg">
+                    Trainer
+                </button>
+
+            </form>
+        </div>
+        <br>
+
+        <div class="p-2">
+            <form action="#" data-th-action="@{/customer}" data-th-object="${model}" method="Get">
+                <button type="submit" name="Customer" class="btn btn-dark btn-lg">
+                    As a Customer
+                </button>
+
+            </form>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

@@ -8,7 +8,7 @@
 </head>
 <body>
 <div align= "center">
-    <h2  >Spring Boot Crud System -Student Registation</h2>
+    <h2  >Spring Boot Fitness Tracking Application</h2>
     <tr>
         <div align = "center" >
             <button >  <a  th:href="@{'/CreateUser'}">Add New</a></button>
@@ -18,25 +18,33 @@
     </tr>
     <tr>
 
-        <div class="col-sm-5" align = "center">
+        <div class="col-sm-5" align = "center" th:width="200px">
             <div class="panel-body" align = "center" >
                 <table class="table">
                     <thead class="thead-dark">
                     <tr>
-                        <th>Student ID</th>
-                        <th>Student Name</th>
-                        <th>Course</th>
-                        <th>Fee</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Time & Date</th>
+                        <th>Weight kg.</th>
+                        <th>Body Measurements :
+                        <br>
+                           <p>Height,Chest,Waist</p>
+
+                        </th>
+                        <th>Heart Rate %</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr  th:each="student : ${liststudent }">
-                        <td th:text="${student.id}">Student ID</td>
-                        <td th:text="${student.studentname}">StudentName</td>
-                        <td th:text="${student.course}">Course</td>
-                        <td th:text="${student.fee}">Fee</td>
+                        <td th:text="${student.id}">ID</td>
+                        <td th:text="${student.name}">Name</td>
+                        <td th:text="${student.timeAndDate}">Time and Date</td>
+                        <td th:text="${student.weight}">Weight</td>
+                        <td th:text="${student.body_measurements}">Body Measurements</td>
+                        <td th:text="${student.heartRate}">Heart Rate</td>
                         <td>
                             <a th:href="@{'/edit/' + ${student.id}}">Edit</a>
                         </td>

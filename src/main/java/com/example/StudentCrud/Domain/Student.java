@@ -10,41 +10,71 @@ public class Student {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
-    private String studentname;
-    private String course;
-    private int fee;
+    private String name;
+    private String timeAndDate;
+    private int weight;
+    private String body_measurements;
+    private int heartRate;
+
     public Student() {
 
     }
-    public Student(Long id, String studentname, String course, int fee) {
+    public Student(Long id, String name, String timeAndDate,int weight,String body_measurements,int heartRate) {
 
         this.id = id;
-        this.studentname = studentname;
-        this.course = course;
-        this.fee = fee;
+        this.name = name;
+        this.timeAndDate = timeAndDate;
+        this.weight=weight;
+        this.body_measurements= body_measurements;
+        this.heartRate=heartRate;
+
     }
+
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
-    public String getStudentname() {
-        return studentname;
+
+    public String getName() {
+        return name;
     }
-    public void setStudentname(String studentname) {
-        this.studentname = studentname;
+
+    public void setName(String name) {
+        this.name = name;
     }
-    public String getCourse() {
-        return course;
+
+    public String getTimeAndDate() {
+        return timeAndDate;
     }
-    public void setCourse(String course) {
-        this.course = course;
+
+    public void setTimeAndDate(String timeAndDate) {
+        this.timeAndDate = timeAndDate;
     }
-    public int getFee() {
-        return fee;
+
+    public int getWeight() {
+        return weight;
     }
-    public void setFee(int fee) {
-        this.fee = fee;
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public String getBody_measurements() {
+        return body_measurements;
+    }
+
+    public void setBody_measurements(String body_measurements) {
+        this.body_measurements = body_measurements;
+    }
+
+    public int getHeartRate() {
+        return heartRate;
+    }
+
+    public void setHeartRate(int heartRate) {
+        this.heartRate = heartRate;
     }
 }
