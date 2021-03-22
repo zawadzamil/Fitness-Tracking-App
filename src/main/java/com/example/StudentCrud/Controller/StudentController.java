@@ -41,7 +41,7 @@ public class StudentController {
     public String Start2(Model model){
 
 
-        return null;
+        return "Test";
     }
 
     @GetMapping("/CreateUser")
