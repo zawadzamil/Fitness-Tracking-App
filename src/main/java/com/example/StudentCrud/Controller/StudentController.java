@@ -25,7 +25,7 @@ public class StudentController {
         return "Index";
     }
     @GetMapping("/Home")
-    public ModelAndView startPage(Model model){
+    public ModelAndView startPage(){
 
     ModelAndView modelAndView= new ModelAndView();
     modelAndView.setViewName("Home");
@@ -38,7 +38,7 @@ public class StudentController {
         return "Index";
     }
     @RequestMapping(value="/customer", method=RequestMethod.GET)
-    public String Start2(Model model){
+    public String Start2(){
 
 
         return "Test";
